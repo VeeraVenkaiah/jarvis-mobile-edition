@@ -425,3 +425,33 @@ console.log(
 console.log(
     "NETWORK: READY"
 );
+
+/ ASK FOR API KEY WHEN PAGE OPENS
+window.addEventListener("load", () => {
+
+    if (!localStorage.getItem("jarvis_key")) {
+
+        const key = prompt(
+            "J.A.R.V.I.S SECURITY: Enter your Gemini API Key"
+        );
+
+        if (key && key.trim()) {
+
+            localStorage.setItem(
+                "jarvis_key",
+                key.trim()
+            );
+
+            API_KEY = key.trim();
+
+            alert("J.A.R.V.I.S API KEY CONFIGURED!");
+
+        } else {
+
+            alert("API KEY REQUIRED TO ACTIVATE AI CORE.");
+
+        }
+
+    }
+
+});
