@@ -3,7 +3,7 @@ let API_KEY = localStorage.getItem('jarvis_key');
 if(!API_KEY){ API_KEY = prompt('Enter your Gemini API Key:'); 
              if(API_KEY) localStorage.setItem('jarvis_key', API_KEY); }
 // ===== 2. SMART MODELS (ఒకటి fail అయితే next auto try) =====
-const MODELS = ["gemini-3.8-flash", "gemini-flash-latest"]; 
+const MODELS = ["gemini-3.6-flash", "gemini-flash-latest"]; 
 const chat=document.getElementById('chat'); 
 const input=document.getElementById('msg'); 
 const micBtn=document.getElementById('mic-btn'); 
